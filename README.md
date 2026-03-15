@@ -1,4 +1,3 @@
-```markdown
 # StackPilot — Your AI Software Architect
 
 **Describe your product. Get your stack. Ship faster.**
