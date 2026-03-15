@@ -5,3 +5,4 @@ dist
 *.log
 projects/
 docs/
+.npmrc

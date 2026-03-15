@@ -11,21 +11,21 @@ StackPilot is an AI-powered CLI tool that act as a personal software architect. 
 You can run StackPilot instantly without installing it locally:
 
 ```bash
-npx stackpilot create
+npx stack-pilot-architect create
 ```
 
 Or install it globally:
 
 ```bash
-npm install -g stackpilot
-stackpilot create
+npm install -g stack-pilot-architect
+stack-pilot-architect create
 ```
 
 ### 2. Initialization
 Configure your AI provider (Google Gemini, Anthropic, or OpenAI):
 
 ```bash
-stackpilot init
+stack-pilot-architect init
 ```
 
 ### 3. Create a Project
