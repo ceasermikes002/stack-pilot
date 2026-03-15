@@ -3,6 +3,7 @@ import { createCLI } from './cli.js';
 import dotenv from 'dotenv';
 import fs from 'fs-extra';
 import path from 'path';
+import os from 'os';
 import { fileURLToPath } from 'url';
 
 // Helper to load .env files manually to avoid noisy library logs
@@ -26,6 +27,10 @@ loadEnv(path.join(process.cwd(), '.env'));
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 loadEnv(path.join(__dirname, '../.env'));
+
+// Also load from user's home directory for global persistence
+loadEnv(path.join(os.homedir(), '.stackpilot', '.env'));
+loadEnv(path.join(os.homedir(), '.env'));
 
 async function main() {
     const cli = createCLI();

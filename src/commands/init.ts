@@ -15,7 +15,6 @@ export async function initCommand() {
 
     if (!isGeminiFree) {
         logger.info('Configure your preferred AI provider and API keys.');
-        logger.info(`Tip: Use ${silver('STACKPILOT_GEMINI_API_KEY')} for zero-config CI/CD.`);
         console.log();
     }
 
@@ -59,11 +58,11 @@ export async function initCommand() {
 
     let apiKey = currentKey[provider];
 
-    // SKIP PROMPT for Gemini if key is already in environment (the "Free" tier experience)
-    if (provider === 'gemini' && process.env.STACKPILOT_GEMINI_API_KEY) {
+    // SKIP PROMPT for Gemini if key is detected from Env or existing Config (the "Free" tier experience)
+    if (provider === 'gemini' && apiKey) {
         logger.info(`${silver('Google Gemini')} is currently using the ${chalk.green('Developer Tier (Free)')}.`);
-        logger.info(dim('No manual key entry required.'));
-        apiKey = process.env.STACKPILOT_GEMINI_API_KEY;
+        logger.info(dim('Using active API key from environment/config.'));
+        console.log();
     } else {
         const result = await inquirer.prompt<{ apiKey: string }>([
             {
