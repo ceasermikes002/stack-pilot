@@ -21,19 +21,21 @@ npm install -g stack-pilot-architect
 stack-pilot-architect create
 ```
 
-### 2. Initialization
-Configure your AI provider (Google Gemini, Anthropic, or OpenAI):
+### 1. Initialization
+First, configure your AI provider (Google Gemini, Anthropic, or OpenAI):
 
 ```bash
 stack-pilot-architect init
 ```
 
-### 3. Create a Project
-Start building your next big idea:
+### 2. Create a Project
+Now you're ready to start building your next big idea:
 
 ```bash
-stackpilot create
+stack-pilot-architect create
 ```
+
+*Tip: You can also use environment variables like `STACKPILOT_GEMINI_API_KEY` for a zero-config experience.*
 
 ---
 

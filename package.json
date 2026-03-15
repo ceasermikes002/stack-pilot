@@ -1,11 +1,11 @@
 {
   "name": "stack-pilot-architect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "stackpilot": "./dist/index.js"
+    "stack-pilot-architect": "./dist/index.js"
   },
   "directories": {
     "doc": "docs"
