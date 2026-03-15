@@ -17,8 +17,7 @@ npx stack-pilot-architect create
 Or install it globally:
 
 ```bash
-npm install -g stack-pilot-architect
-stack-pilot-architect create
+npm install -g stack-pilot-architect@latest
 ```
 
 ### 1. Initialization
@@ -34,10 +33,6 @@ Now you're ready to start building your next big idea:
 ```bash
 stack-pilot-architect create
 ```
-
-*Tip: You can also use environment variables like `STACKPILOT_GEMINI_API_KEY` for a zero-config experience.*
-
----
 
 ## Key Features
 
@@ -78,7 +73,7 @@ npm run build
 
 ## Contributing
 
-We welcome contributions! Please see our [PRD](docs/StackPilot-PRD.md) for the long-term vision and architectural goals.
+We welcome contributions! Please see our [Developer Documentation](dev-docs/index.html) for architectural goals and technical guides.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)

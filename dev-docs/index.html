@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackPilot | Developer Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #121212;
+            --border: #262626;
+            --silver: #C0C0C0;
+            --dim: #6B7280;
+            --accent: #10b981;
+            --accent-blue: #3b82f6;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--silver);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        code, pre {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 40px;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        h1, h2, h3 {
+            color: var(--white);
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 32px; border-left: 4px solid var(--accent); padding-left: 16px; margin-top: 0; }
+        h2 { font-size: 24px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--silver);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: 8px;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card h3 span {
+            color: var(--accent);
+        }
+
+        pre {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+
+        code {
+            font-size: 14px;
+            color: var(--accent-blue);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            background: #1e293b;
+            color: var(--accent-blue);
+            margin-right: 8px;
+        }
+
+        .accent-text { color: var(--accent); }
+        .dim-text { color: var(--dim); }
+
+        ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--dim);
+            font-size: 14px;
+        }
+
+        .badge {
+            background: var(--accent);
+            color: var(--bg);
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span>✸</span> StackPilot Architect
+            </div>
+            <p class="dim-text">Developer Documentation & Internal Systems Guide</p>
+        </header>
+
+        <section id="architecture">
+            <h1>System Architecture</h1>
+            <p>StackPilot is built on three core pillars that work in sequence to move from a project description to a production-ready monorepo.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3><span>01</span> AI Engine</h3>
+                    <p>Uses LLMs (Gemini, Claude, GPT) to parse intent signals like "fast", "marketplace", or "real-time" into structured stack selections.</p>
+                </div>
+                <div class="card">
+                    <h3><span>02</span> Validator</h3>
+                    <p>A deterministic rule engine that ensures selected components (e.g., Supabase + Prisma) are technically compatible before scaffolding.</p>
+                </div>
+                <div class="card">
+                    <h3><span>03</span> Scaffolder</h3>
+                    <p>The execution layer that copies templates, injects variables via Handlebars, and orchestrates dependency installation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands">
+            <h2>CLI Command Reference</h2>
+            <p>The CLI is distributed via NPM as <code class="accent-text">stack-pilot-architect</code>.</p>
+            
+            <pre><code># Initialize your AI provider (Stored in local config)
+stack-pilot-architect init
+
+# Start the interactive AI scaffolding flow
+stack-pilot-architect create
+
+# Manually override or update specific stack configurations
+stack-pilot-architect override</code></pre>
+
+            <h3>Global Configuration</h3>
+            <p>Config is stored in the CLI installation directory. The <code class="accent-text">init</code> command manages these keys, but they can be bypassed using environment variables:</p>
+            <ul>
+                <li><code class="accent-text">STACKPILOT_GEMINI_API_KEY</code></li>
+                <li><code class="accent-text">STACKPILOT_OPENAI_API_KEY</code></li>
+                <li><code class="accent-text">STACKPILOT_AI_PROVIDER</code></li>
+            </ul>
+        </section>
+
+        <section id="scaffolder-logic">
+            <h2>Scaffolder Logic & Workspace</h2>
+            <p>StackPilot maintains a strict project organization policy to keep your development machine head-clean.</p>
+            <ul>
+                <li><strong>Centralized Hub</strong>: All generated projects are saved to <code class="tag">Documents/StackPilot/projects/</code> by default.</li>
+                <li><strong>Isolation</strong>: Each project is a standalone Monorepo (TurboRepo or standard) with its own Docker and deployment configs.</li>
+                <li><strong>Deep Integration</strong>: Scaffolding isn't just file copying; it involves running <code class="tag">npm install</code>, <code class="tag">git init</code>, and DB generation.</li>
+            </ul>
+        </section>
+
+        <section id="contributing">
+            <h2>Adding New Templates</h2>
+            <p>Templates live in the <code class="accent-text">/templates</code> directory. To add a new stack:</p>
+            <ol style="margin-left: 20px; color: var(--silver); list-style-type: decimal;">
+                <li style="padding-left: 10px; margin-bottom: 8px;">Create a new folder in <code class="accent-text">/templates/[stack-name]</code>.</li>
+                <li style="padding-left: 10px; margin-bottom: 8px;">Add a <code class="accent-text">manifest.json</code> defining the stack capabilities.</li>
+                <li style="padding-left: 10px; margin-bottom: 8px;">Place boilerplates in a <code class="accent-text">/root</code> subfolder using <code class="tag">.hbs</code> extension for dynamic files.</li>
+                <li style="padding-left: 10px; margin-bottom: 8px;">Update <code class="accent-text">config/stacks.config.json</code> to register the new valid options.</li>
+            </ol>
+        </section>
+
+        <footer>
+            <p>Internal Developer Guide &bull; Version 1.0.2 &bull; ✷ StackPilot Core Team</p>
+        </footer>
+    </div>
+</body>
+</html>
