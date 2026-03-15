@@ -11,9 +11,13 @@ export async function initCommand() {
     banner();
     section('AI Provider Setup');
 
-    logger.info('Configure your preferred AI provider and API keys.');
-    logger.info(`Tip: Use ${silver('STACKPILOT_GEMINI_API_KEY')} for zero-config CI/CD.`);
-    console.log();
+    const isGeminiFree = !!process.env.STACKPILOT_GEMINI_API_KEY;
+
+    if (!isGeminiFree) {
+        logger.info('Configure your preferred AI provider and API keys.');
+        logger.info(`Tip: Use ${silver('STACKPILOT_GEMINI_API_KEY')} for zero-config CI/CD.`);
+        console.log();
+    }
 
     const config = getConfig();
 
@@ -85,6 +89,6 @@ export async function initCommand() {
     console.log();
     divider();
     console.log();
-    logger.success(`Provider set to ${provider}. Run ${silver('stackpilot create')} to scaffold your first project.`);
+    logger.success(`Provider set to ${provider}. Run ${silver('stack-pilot-architect create')} to scaffold your first project.`);
     console.log();
 }
