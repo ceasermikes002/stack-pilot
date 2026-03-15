@@ -37,15 +37,15 @@ stackpilot create
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- **🧠 AI Architecture Engine**: Analyzes your project description to identify intent signals like "marketplaces", "real-time updates", or "MVPs".
-- **📝 Transparent Reasoning**: Never guest why a technology was chosen. The CLI explains the "why" behind every layer of your stack.
-- **🏗️ Production-Ready Scaffolds**: Generates deep-integrated monorepos using TurboRepo, Prisma, Tailwind, and more.
-- **📂 Centralized Workspace**: All projects are automatically organized in `Documents/StackPilot/projects/` for a clean dev environment.
-- **🐳 Deployment Ready**: Automatic injection of Docker, Vercel, or Railway configurations based on your stack.
+- **AI Architecture Engine**: Analyzes your project description to identify intent signals like "marketplaces", "real-time updates", or "MVPs".
+- **Transparent Reasoning**: Never guest why a technology was chosen. The CLI explains the "why" behind every layer of your stack.
+- **Production-Ready Scaffolds**: Generates deep-integrated monorepos using TurboRepo, Prisma, Tailwind, and more.
+- **Centralized Workspace**: All projects are automatically organized in `Documents/StackPilot/projects/` for a clean dev environment.
+- **Deployment Ready**: Automatic injection of Docker, Vercel, or Railway configurations based on your stack.
 
-## 🛠️ Supported Stack Options (V1)
+## Supported Stack Options (V1)
 
 | Category | Options |
 | :--- | :--- |
@@ -58,7 +58,7 @@ stackpilot create
 
 ---
 
-## 🧪 Development
+## Development
 
 ### Running Tests
 We maintain a robust test suite to ensure recommendation accuracy and scaffolding integrity.
@@ -74,7 +74,7 @@ npm run build
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [PRD](docs/StackPilot-PRD.md) for the long-term vision and architectural goals.
 
@@ -86,8 +86,8 @@ We welcome contributions! Please see our [PRD](docs/StackPilot-PRD.md) for the l
 
 ---
 
-## 📄 License
+## License
 Distributed under the ISC License. See `package.json` for details.
 
 ---
-Built with ❤️ by the StackPilot Core Team.
+Built by Chima
