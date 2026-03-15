@@ -73,7 +73,7 @@ npm run build
 
 ## Contributing
 
-We welcome contributions! Please see our [Developer Documentation](dev-docs/index.html) for architectural goals and technical guides.
+We welcome contributions! Please see our [Developer Documentation](index.html) for architectural goals and technical guides.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
