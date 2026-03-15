@@ -237,6 +237,15 @@ stack-pilot-architect override</code></pre>
             </ul>
         </section>
 
+        <section id="deployment-assets">
+            <h2>Deployment Assets & Scripts</h2>
+            <p>Beyond core stack templates, StackPilot uses shared assets to handle platform-specific configurations.</p>
+            <ul>
+                <li><strong>Deployments Folder</strong>: Contains global configuration blocks for <code class="tag">Docker</code>, <code class="tag">Vercel</code>, and <code class="tag">Railway</code>. These are injected into projects based on the user's choice, ensuring consistent infrastructure across different tech stacks.</li>
+                <li><strong>Scripts Folder</strong>: Houses internal utility scripts used during local development. For example, <code class="accent-text">generate-templates.js</code> is used to validate or pre-process the template registry before build.</li>
+            </ul>
+        </section>
+
         <section id="contributing">
             <h2>Adding New Templates</h2>
             <p>Templates live in the <code class="accent-text">/templates</code> directory. To add a new stack:</p>
@@ -249,7 +258,7 @@ stack-pilot-architect override</code></pre>
         </section>
 
         <footer>
-            <p>Internal Developer Guide &bull; Version 1.0.2 &bull; ✷ StackPilot Core Team</p>
+            <p>Internal Developer Guide &bull; Version 1.0.2 &bull; ✷ StackPilot</p>
         </footer>
     </div>
 </body>
