@@ -1,0 +1,11 @@
+{
+  "name": "fastify-postgresql-prisma",
+  "description": "High-performance monorepo: NextJS frontend + Fastify backend with PostgreSQL and Prisma",
+  "setupCommands": [
+    "npx create-turbo@latest . --example with-tailwind --skip-install %PM_FLAG%",
+    "mkdir -p apps/api && cd apps/api && npm init -y && npm i fastify @fastify/cors @fastify/helmet && npm i -D typescript @types/node ts-node && npx tsc --init"
+  ],
+  "postInstallCommands": [
+    "%PKG_MGR% run db:generate"
+  ]
+}

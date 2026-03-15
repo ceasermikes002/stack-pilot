@@ -1,0 +1,8 @@
+{
+  "name": "nextjs-postgresql-drizzle",
+  "description": "Enterprise monorepo combining Next.js App Router and Drizzle ORM",
+  "setupCommands": [
+    "npx create-turbo@latest . --example with-tailwind --skip-install %PM_FLAG%"
+  ],
+  "postInstallCommands": []
+}

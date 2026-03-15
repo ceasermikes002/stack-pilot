@@ -1,0 +1,11 @@
+{
+  "name": "express-postgresql-prisma",
+  "description": "Custom monorepo of NextJS frontend + Express.js backend with PostgreSQL and Prisma",
+  "setupCommands": [
+    "npx create-turbo@latest . --example with-tailwind --skip-install %PM_FLAG%",
+    "mkdir -p apps/api && cd apps/api && npm init -y && npm i express cors morgan helmet && npm i -D typescript @types/node @types/express @types/cors @types/morgan ts-node && npx tsc --init"
+  ],
+  "postInstallCommands": [
+    "%PKG_MGR% run db:generate"
+  ]
+}

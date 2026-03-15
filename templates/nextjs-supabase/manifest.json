@@ -1,0 +1,8 @@
+{
+    "name": "nextjs-supabase",
+    "description": "Enterprise monorepo combining Next.js App Router and Supabase (Auth + Postgres + Storage)",
+    "setupCommands": [
+        "npx create-turbo@latest . --example with-tailwind --skip-install %PM_FLAG%"
+    ],
+    "postInstallCommands": []
+}

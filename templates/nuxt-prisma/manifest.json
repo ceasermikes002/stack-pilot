@@ -1,0 +1,10 @@
+{
+    "name": "nuxt-prisma",
+    "description": "Enterprise monorepo combining Nuxt 4 Fullstack and Prisma ORM",
+    "setupCommands": [
+        "npx nuxi@latest init apps/web --no-install --git-init false %PM_FLAG%"
+    ],
+    "postInstallCommands": [
+        "%PKG_MGR% run db:generate"
+    ]
+}

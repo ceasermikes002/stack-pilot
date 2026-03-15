@@ -1,0 +1,10 @@
+{
+    "name": "nextjs-prisma-clerk",
+    "description": "Enterprise monorepo combining Next.js App Router, Prisma ORM, and Clerk Auth",
+    "setupCommands": [
+        "npx create-turbo@latest . --example with-tailwind --skip-install %PM_FLAG%"
+    ],
+    "postInstallCommands": [
+        "%PKG_MGR% run db:generate"
+    ]
+}

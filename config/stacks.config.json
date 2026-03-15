@@ -1,0 +1,213 @@
+{
+    "frontend": [
+        {
+            "id": "nextjs",
+            "name": "Next.js 14 (App Router)",
+            "description": "Fullstack SaaS, fast shipping, Vercel-hosted",
+            "priority": "Core",
+            "isFullstack": true
+        },
+        {
+            "id": "nuxt",
+            "name": "Nuxt 3",
+            "description": "Vue ecosystem preference, SSR-first apps",
+            "priority": "Core",
+            "isFullstack": true
+        }
+    ],
+    "backend": [
+        {
+            "id": "none",
+            "name": "None (Fullstack Framework)",
+            "description": "When frontend framework has built-in server capabilities",
+            "priority": "Core",
+            "requiresFullstackFrontend": true
+        },
+        {
+            "id": "nestjs",
+            "name": "NestJS",
+            "description": "Enterprise APIs, complex business logic, team projects",
+            "priority": "Core"
+        },
+        {
+            "id": "express",
+            "name": "Express",
+            "description": "Lightweight APIs, custom middleware requirements",
+            "priority": "Stretch"
+        },
+        {
+            "id": "fastify",
+            "name": "Fastify",
+            "description": "High-performance APIs, microservice patterns",
+            "priority": "Stretch"
+        }
+    ],
+    "database": [
+        {
+            "id": "postgresql",
+            "name": "PostgreSQL",
+            "description": "Relational data, marketplaces, SaaS with complex queries",
+            "priority": "Core"
+        },
+        {
+            "id": "supabase",
+            "name": "Supabase",
+            "description": "Fast shipping, built-in auth + storage + realtime",
+            "priority": "Core"
+        },
+        {
+            "id": "mongodb",
+            "name": "MongoDB",
+            "description": "Flexible schema, content platforms, document-heavy apps",
+            "priority": "Core"
+        },
+        {
+            "id": "firebase",
+            "name": "Firebase (Firestore)",
+            "description": "Realtime apps, mobile-first, Google ecosystem",
+            "priority": "Core"
+        }
+    ],
+    "orm": [
+        {
+            "id": "prisma",
+            "name": "Prisma",
+            "description": "PostgreSQL / MySQL - type-safe queries, excellent DX",
+            "priority": "Core",
+            "compatibleDatabases": [
+                "postgresql"
+            ]
+        },
+        {
+            "id": "drizzle",
+            "name": "Drizzle",
+            "description": "PostgreSQL - lightweight, SQL-like syntax",
+            "priority": "Core",
+            "compatibleDatabases": [
+                "postgresql"
+            ]
+        },
+        {
+            "id": "mongoose",
+            "name": "Mongoose",
+            "description": "MongoDB - schema validation, mature ecosystem",
+            "priority": "Core",
+            "compatibleDatabases": [
+                "mongodb"
+            ]
+        },
+        {
+            "id": "supabase-sdk",
+            "name": "Supabase JS SDK",
+            "description": "Supabase - built-in client, no ORM needed",
+            "priority": "Core",
+            "compatibleDatabases": [
+                "supabase"
+            ]
+        },
+        {
+            "id": "firebase-sdk",
+            "name": "Firebase SDK",
+            "description": "Firebase - built-in client, no ORM needed",
+            "priority": "Core",
+            "compatibleDatabases": [
+                "firebase"
+            ]
+        }
+    ],
+    "auth": [
+        {
+            "id": "clerk",
+            "name": "Clerk",
+            "description": "Fast setup, pre-built UI, user management dashboard",
+            "priority": "Core"
+        },
+        {
+            "id": "authjs",
+            "name": "Auth.js (NextAuth)",
+            "description": "Open-source, flexible providers, self-hosted",
+            "priority": "Core"
+        },
+        {
+            "id": "supabase-auth",
+            "name": "Supabase Auth",
+            "description": "When Supabase is selected as database",
+            "priority": "Core",
+            "requiredDatabase": "supabase"
+        },
+        {
+            "id": "firebase-auth",
+            "name": "Firebase Auth",
+            "description": "When Firebase is selected as database",
+            "priority": "Core",
+            "requiredDatabase": "firebase"
+        }
+    ],
+    "payments": [
+        {
+            "id": "stripe",
+            "name": "Stripe",
+            "description": "Default for all subscription and one-time payment flows",
+            "priority": "Core"
+        },
+        {
+            "id": "lemonsqueezy",
+            "name": "LemonSqueezy",
+            "description": "Digital products, simpler tax handling, indie-friendly",
+            "priority": "Core"
+        },
+        {
+            "id": "none",
+            "name": "None",
+            "description": "When the product has no payment requirement",
+            "priority": "Core"
+        }
+    ],
+    "styling": [
+        {
+            "id": "tailwind-shadcn",
+            "name": "Tailwind CSS + shadcn/ui",
+            "description": "Default - utility-first with accessible component library",
+            "priority": "Core"
+        },
+        {
+            "id": "tailwind",
+            "name": "Tailwind CSS only",
+            "description": "When a custom design system is preferred",
+            "priority": "Core"
+        }
+    ],
+    "deployment": [
+        {
+            "id": "vercel",
+            "name": "Vercel",
+            "description": "Default for Next.js - zero-config deployment",
+            "priority": "Core",
+            "compatibleFrontends": [
+                "nextjs",
+                "nuxt"
+            ],
+            "compatibleBackends": [
+                "none"
+            ]
+        },
+        {
+            "id": "docker",
+            "name": "Docker + Docker Compose",
+            "description": "Self-hosted, VPS deployments",
+            "priority": "Core"
+        },
+        {
+            "id": "railway",
+            "name": "Railway config",
+            "description": "Managed platform, low devops overhead",
+            "priority": "Core"
+        },
+        {
+            "id": "none",
+            "name": "None",
+            "description": "When developer handles deployment manually",
+            "priority": "Core"
+        }
+    ]
+}

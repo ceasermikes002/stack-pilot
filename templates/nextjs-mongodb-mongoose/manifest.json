@@ -1,0 +1,8 @@
+{
+  "name": "nextjs-mongodb-mongoose",
+  "description": "Enterprise monorepo combining Next.js App Router and MongoDB",
+  "setupCommands": [
+    "npx create-turbo@latest . --example with-tailwind --skip-install %PM_FLAG%"
+  ],
+  "postInstallCommands": []
+}

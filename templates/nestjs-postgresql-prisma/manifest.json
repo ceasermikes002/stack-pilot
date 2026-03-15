@@ -1,0 +1,11 @@
+{
+  "name": "nestjs-postgresql-prisma",
+  "description": "Enterprise monorepo with NextJS Frontend, NestJS API Backend, PostgreSQL, and Prisma",
+  "setupCommands": [
+    "npx create-turbo@latest . --example with-tailwind --skip-install %PM_FLAG%",
+    "npx @nestjs/cli new apps/api --strict --skip-git %PM_FLAG%"
+  ],
+  "postInstallCommands": [
+    "%PKG_MGR% run db:generate"
+  ]
+}

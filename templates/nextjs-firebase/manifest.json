@@ -1,0 +1,8 @@
+{
+  "name": "nextjs-firebase",
+  "description": "Next.js App Router with Firebase Backend (Auth + Firestore)",
+  "setupCommands": [
+    "npx create-turbo@latest . --example with-tailwind --skip-install %PM_FLAG%"
+  ],
+  "postInstallCommands": []
+}
